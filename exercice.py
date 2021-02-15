@@ -3,19 +3,32 @@
 
 
 def order(values: list = None) -> list:
+
     if values is None:
         # TODO: demander les valeurs ici
-        pass
+        values = []
+        for i in range(10):
+            ajout = input("Élément: ")
+            values.append(ajout)
 
-    return []
+    return sorted(values)
 
 
 def anagrams(words: list = None) -> bool:
     if words is None:
-        # TODO: demander les mots ici
-        pass
+        mot1 = input("Tapper le 1er mot: ")
+        mot2 = input("Tapper le 2e mot: ")
 
-    return False
+        if len(mot1) != len(mot2):
+            return False
+        else:
+            for i in range(len(mot1)):
+                if mot2.find(mot1[i]) == -1:
+                    return False
+                else:
+                    lettre_ds_mot = True
+
+    return lettre_ds_mot
 
 
 def contains_doubles(items: list) -> bool:
@@ -45,13 +58,13 @@ def print_recipe(ingredients) -> None:
 
 
 def main() -> None:
-    print(f"On essaie d'ordonner les valeurs...")
-    order()
+    """print(f"On essaie d'ordonner les valeurs...")
+    print(order())"""
 
     print(f"On vérifie les anagrammes...")
-    anagrams()
+    print(anagrams())
 
-    my_list = [3, 3, 5, 6, 1, 1]
+    """my_list = [3, 3, 5, 6, 1, 1]
     print(f"Ma liste contient-elle des doublons? {contains_doubles(my_list)}")
 
     grades = {"Bob": [90, 65, 20], "Alice": [85, 75, 83]}
@@ -65,7 +78,7 @@ def main() -> None:
     recipes = get_recipes()
 
     print("On affiche une recette au choix...")
-    print_recipe(recipes)
+    print_recipe(recipes)"""
 
 
 if __name__ == '__main__':
