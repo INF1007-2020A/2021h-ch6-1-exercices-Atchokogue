@@ -1,20 +1,8 @@
-test_anagram (__main__.TestExercice) ... ERROR
+test_anagram (__main__.TestExercice) ... ok
 test_doubles (__main__.TestExercice) ... FAIL
 test_frequence (__main__.TestExercice) ... FAIL
 test_grades (__main__.TestExercice) ... FAIL
 test_order (__main__.TestExercice) ... ok
-
-======================================================================
-ERROR: test_anagram (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 35, in test_anagram
-    output = [exercice.anagrams(v) for v in words]
-  File "test_exercice.py", line 35, in <listcomp>
-    output = [exercice.anagrams(v) for v in words]
-  File "/home/runner/work/2021h-ch6-1-exercices-Atchokogue/2021h-ch6-1-exercices-Atchokogue/exercice.py", line 31, in anagrams
-    return lettre_ds_mot
-UnboundLocalError: local variable 'lettre_ds_mot' referenced before assignment
 
 ======================================================================
 FAIL: test_doubles (__main__.TestExercice)
@@ -79,4 +67,4 @@ AssertionError: {} != {'Sam': 85}
 ----------------------------------------------------------------------
 Ran 5 tests in 0.002s
 
-FAILED (failures=3, errors=1)
+FAILED (failures=3)
